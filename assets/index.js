@@ -9,14 +9,14 @@ window.addEventListener("DOMContentLoaded", () => {
     await new Promise((resolve) => setTimeout(resolve, 1000)) // delayed for ux
    
     const res = await fetch(
-      `https://vnevpeyewqsbbniekaxp.supabase.co/storage/v1/object/public/common/resume.pdf`  // Ubah link
+      `https://drive.google.com/file/d/1jlCw1xaP0HVEIonQvM2VY0j2OR24C9zp/view?usp=sharing`  // Ubah link
     );
     if (!res.ok) return;
     const blob = await res.blob();
     const url = window.URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.href = url;
-    link.setAttribute("download", "Resume.pdf"); // Ubah nama file
+    link.setAttribute("download", "CV Felda Putri Widya Rachmawati"); // Ubah nama file
     link.click();
 
     resumeDownloadBtn.disabled = false;
